@@ -1,0 +1,400 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Available Rooms</title>
+
+  <style>
+    body{
+      background-color: #f5e6e6;
+    }
+    .room-card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 20px;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      background-color: #a17c7c;
+    }
+
+    .room-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .room-name {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .room-description {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Available Rooms</h1>
+    <div class="room-card" onclick="window.location.href='/booking'">
+      <img class="room-image" src="images/economy.jpg" alt="Room 1">
+      <div class="room-name">The Coastal Suite</div>
+
+    </div>
+    <div class="room-card" onclick="window.location.href='/booking'">
+      <img class="room-image" src="images/deluxe.jpg" alt="Room 2">
+      <div class="room-name">Standard Single</div>
+      
+    </div>
+    <div class="room-card" onclick="window.location.href='/booking'">
+      <img class="room-image" src="images/royalty.jpg" alt="Room 3">
+      <div class="room-name">The Victorian Era Chamber</div>
+
+    </div>
+    <div class="room-card" onclick="window.location.href='/booking'">
+      <img class="room-image" src="images/bed4.jpg" alt="Room 4">
+      <div class="room-name">The Lotus Room</div>
+     
+    </div>
+    <div class="room-card" onclick="window.location.href='/booking'">
+      <img class="room-image" src="images/bed5.jpg" alt="Room 5">
+      <div class="room-name">The Hollywood Glam Room</div>
+
+    </div>
+    <div class="room-card" onclick="window.location.href='/booking'">
+      <img class="room-image" src="images/bed6.jpg" alt="Room 6">
+      <div class="room-name">Executive Double</div>
+      
+    </div>
+  </div>
+</body>
+</html>
+
+ -->
+
+
+
+
+ <!doctype html>
+ <html lang="en" data-bs-theme="auto">
+   <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+ 
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="description" content="">
+     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+     <meta name="generator" content="Hugo 0.112.5">
+     <title>Album example · Bootstrap v5.3</title>
+ 
+     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+ 
+     
+ 
+     
+ 
+ <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <!-- Favicons -->
+ <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+ <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+ <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+ <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+ <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+ <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+ <meta name="theme-color" content="#712cf9">
+ 
+ 
+     <style>
+       .bd-placeholder-img {
+         font-size: 1.125rem;
+         text-anchor: middle;
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         user-select: none;
+       }
+ 
+       @media (min-width: 768px) {
+         .bd-placeholder-img-lg {
+           font-size: 3.5rem;
+         }
+       }
+ 
+       .b-example-divider {
+         width: 100%;
+         height: 3rem;
+         background-color: rgba(0, 0, 0, .1);
+         border: solid rgba(0, 0, 0, .15);
+         border-width: 1px 0;
+         box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+       }
+ 
+       .b-example-vr {
+         flex-shrink: 0;
+         width: 1.5rem;
+         height: 100vh;
+       }
+ 
+       .bi {
+         vertical-align: -.125em;
+         fill: currentColor;
+       }
+ 
+       .nav-scroller {
+         position: relative;
+         z-index: 2;
+         height: 2.75rem;
+         overflow-y: hidden;
+       }
+ 
+       .nav-scroller .nav {
+         display: flex;
+         flex-wrap: nowrap;
+         padding-bottom: 1rem;
+         margin-top: -1px;
+         overflow-x: auto;
+         text-align: center;
+         white-space: nowrap;
+         -webkit-overflow-scrolling: touch;
+       }
+ 
+       .btn-bd-primary {
+         --bd-violet-bg: #712cf9;
+         --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+ 
+         --bs-btn-font-weight: 600;
+         --bs-btn-color: var(--bs-white);
+         --bs-btn-bg: var(--bd-violet-bg);
+         --bs-btn-border-color: var(--bd-violet-bg);
+         --bs-btn-hover-color: var(--bs-white);
+         --bs-btn-hover-bg: #6528e0;
+         --bs-btn-hover-border-color: #6528e0;
+         --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+         --bs-btn-active-color: var(--bs-btn-hover-color);
+         --bs-btn-active-bg: #5a23c8;
+         --bs-btn-active-border-color: #5a23c8;
+       }
+       .bd-mode-toggle {
+         z-index: 1500;
+       }
+     </style>
+ 
+     
+   </head>
+   <body>
+     
+ 
+   
+ 
+     
+ <header data-bs-theme="dark">
+   <div class="collapse text-bg-dark" id="navbarHeader">
+     <div class="container">
+       <div class="row">
+         <div class="col-sm-8 col-md-7 py-4">
+           <h4>About</h4>
+           <p class="text-body-secondary">Experience luxury redefined at our hotel. Immerse yourself in elegance and personalized service. With impeccable amenities and serene ambiance, we offer an unforgettable stay. Discover a sanctuary of relaxation and sophistication.</p>
+         </div>
+         <div class="col-sm-4 offset-md-1 py-4">
+           <h4>Contact</h4>
+           <ul class="list-unstyled">
+             <li><a href="#" class="text-white">Follow on Twitter</a></li>
+             <li><a href="#" class="text-white">Like on Facebook</a></li>
+             <li><a href="mailto:ritulsinha22@gmail.com" class="text-white">Email me</a></li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="navbar navbar-dark bg-dark shadow-sm">
+     <div class="container">
+       <a href="#" class="navbar-brand d-flex align-items-center">
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+         <strong>Captivating Moments</strong>
+       </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     </div>
+   </div>
+ </header>
+ 
+ <main>
+ 
+   <section class="py-5 text-center container">
+     <div class="row py-lg-5">
+       <div class="col-lg-6 col-md-8 mx-auto">
+         <h1 class="fw-light">Indulge in Exquisite Comfort</h1>
+         <p class="lead text-body-secondary">Introducing our captivating hotel room collection. Immerse yourself in elegance and comfort as you explore our thoughtfully designed rooms. From cozy singles to spacious suites, each corner exudes luxury and satisfaction. Browse the enchanting images below and book your slice of paradise today. Welcome home, away from home.</p>
+         
+       </div>
+     </div>
+   </section>
+   <div class="room-card" onclick="window.location.href='/booking'">
+   <div class="album py-5 bg-body-tertiary">
+     <div class="container">
+ 
+       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+         <div class="col">
+           <div class="card shadow-sm">
+             <img class="bd-placeholder-img card-img-top" src="images/economy.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+             <div class="card-body">
+               <p class="card-text"> With its soft lighting, plush bedding, and delicate details, this bedroom sets the stage for a romantic haven. Soft, flowing curtains, candlelight, and luxurious textiles create an intimate space that encourages relaxation and romance.</p>
+               <div class="d-flex justify-content-between align-items-center">
+                 <div class="btn-group">
+                   <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                
+                 </div>
+                 
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="images/bedroom3.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+            <div class="card-body">
+              <p class="card-text"> Inspired by the energy of the city, this bedroom showcases an urban chic style. Industrial elements, edgy decor, and a mix of textures come together to create a trendy and cosmopolitan atmosphere that captures the essence of modern living.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+               
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="images/bedroom4.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+            <div class="card-body">
+              <p class="card-text">Infused with rustic charm, this bedroom exudes warmth and character. Exposed wood beams, vintage accents, and cozy textiles create a welcoming ambiance that feels like a charming countryside retreat.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+               
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="images/bedroom5.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+            <div class="card-body">
+              <p class="card-text"> This bedroom embraces sleek lines, contemporary furniture, and a monochromatic color scheme to create a modern sanctuary. The minimalist approach promotes a sense of clarity and relaxation, making it the perfect space to unwind after a long day.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+               
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="images/bedroom7.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+            <div class="card-body">
+              <p class="card-text">Transport yourself to a beachside getaway with this coastal-themed bedroom. Soft hues of blue and white, nautical accents, and breezy fabrics evoke a sense of seaside tranquility, allowing you to unwind and recharge.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+               
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="images/bedroom8.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+            <div class="card-body">
+              <p class="card-text">Bursting with vibrant colors and bold patterns, this lively bedroom is a celebration of energy and creativity. From the vibrant artwork to the eclectic mix of furnishings, every element contributes to a dynamic and energetic atmosphere.r.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+               
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" src="images/bedroom9.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+            <div class="card-body">
+              <p class="card-text">Step into a natural oasis with this bedroom inspired by the beauty of the outdoors. Soft earth tones, potted plants, and natural textures create a peaceful ambiance that brings the essence of nature indoors.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+               
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+         <div class="col">
+           <div class="card shadow-sm">
+             <img class="bd-placeholder-img card-img-top" src="images/deluxe.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+             <div class="card-body">
+               <p class="card-text">Embracing simplicity and clean lines, this bedroom showcases a minimalist design aesthetic. The clutter-free space creates a calming environment, perfect for fostering a sense of serenity and tranquility.</p>
+               <div class="d-flex justify-content-between align-items-center">
+                 <div class="btn-group">
+                   <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+            
+                 </div>
+              
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card shadow-sm">
+             <img class="bd-placeholder-img card-img-top"  src="images/royalty.jpg" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+             <div class="card-body">
+               <p class="card-text">With its soft, plush bedding and warm color scheme, this bedroom exudes a cozy atmosphere that invites relaxation. Sink into the comfortable pillows and enjoy a peaceful night's sleep.</p>
+               <div class="d-flex justify-content-between align-items-center">
+                 <div class="btn-group">
+                   <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                   
+                 </div>
+              
+               </div>
+             </div>
+           </div>
+         </div>
+  
+        
+       </div>
+     </div>
+   </div>
+   </div>
+ </main>
+ 
+ <footer class="text-body-secondary py-5">
+   <div class="container">
+     <p class="float-end mb-1">
+       <a href="#">Back to top</a>
+     </p>
+     <p class="mb-1">© 2023 Paradise. All rights reserved. | Privacy Policy | Terms and Conditions</p>
+  
+   </div>
+ </footer>
+ <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+     </body>
+ </html>
+ 
+
+
+
+

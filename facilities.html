@@ -1,0 +1,498 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <style>
+        .option-box {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .option-box:hover {
+            background-color: #8fd28f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="option-box" onclick="book()">
+              <h3>Book Room</h3>
+            </div>
+            <div class="option-box" onclick="cancelbook()">
+                <h3>Cancel Booking</h3>
+            </div>
+            <div class="option-box" onclick="Roomlist()">
+                <h3>Room List</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function book() {
+            window.location.href = "/booking";
+        }
+
+        function cancelbook() {
+            window.location.href = "/cancel";
+        }
+
+        function Roomlist() {
+            window.location.href = "/rooms";
+        }
+    </script>
+    <div class="background-container"></div>
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <style>
+        .option-box {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .option-box h3 {
+            font-size: 18px;
+            color: #333333;
+            margin: 0;
+        }
+
+        .option-box:hover {
+            background-color: #8fd28f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="option-box" onclick="book()">
+              <h3>Book Room</h3>
+            </div>
+            <div class="option-box" onclick="cancelbook()">
+                <h3>Cancel Booking</h3>
+            </div>
+            <div class="option-box" onclick="Roomlist()">
+                <h3>Room List</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function book() {
+            window.location.href = "/booking";
+        }
+
+        function cancelbook() {
+            window.location.href = "/cancel";
+        }
+
+        function Roomlist() {
+            window.location.href = "/rooms";
+        }
+    </script>
+    <div class="background-container"></div>
+</body>
+</html>
+ -->
+
+
+<!--  
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <style>
+     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+ 
+     body {
+       margin: 0;
+       padding: 0;
+       background-color: #f9f9f9;
+       font-family: Arial, sans-serif;
+     }
+ 
+     header {
+       height: 60px;
+       background-color: #333333;
+       color: #ffffff;
+       text-align: center;
+       padding: 10px;
+     }
+ 
+     footer {
+       height: 40px;
+       background-color: #333333;
+       color: #ffffff;
+       text-align: center;
+       padding: 10px;
+     }
+ 
+     .center-div {
+       position: relative;
+       height: 600px;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center center;
+     }
+ 
+     .signup-form {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       max-width: 500px;
+       padding: 20px;
+       background-color: rgba(255, 255, 255, 0.8);
+       border-radius: 8px;
+       text-align: center;
+       padding-right: 35px;
+     }
+ 
+     h2 {
+       margin-bottom: 20px;
+       color: #333333;
+     }
+ 
+     input[type="text"],
+     input[type="email"],
+     input[type="password"] {
+       width: 100%;
+       padding: 10px;
+       margin-bottom: 20px;
+       padding-right: 10px;
+       border-radius: 4px;
+       border: 1px solid #ccc;
+     }
+ 
+     button {
+       width: 100%;
+       padding: 10px;
+    
+       background-color: #4CAF50;
+       color: #ffffff;
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+       
+     }
+ 
+     button:hover {
+       background-color: #45a049;
+     }
+ 
+     p {
+       margin-top: 20px;
+       font-size: 14px;
+       color: #666666;
+     }
+   </style>
+   <script>
+     document.addEventListener("DOMContentLoaded", function() {
+       var images = [
+         "images/front1.jpg",
+         "images/front2.jpg",
+         "images/front3.jpg",
+         "images/view.jpg"
+       ];
+       var currentIndex = 0;
+       var centerDiv = document.querySelector(".center-div");
+ 
+       function changeBackground() {
+         centerDiv.style.backgroundImage = "url('" + images[currentIndex] + "')";
+         currentIndex = (currentIndex + 1) % images.length;
+       }
+ 
+       setInterval(changeBackground, 3000);
+     });
+   </script>
+ </head>
+ <body>
+   <header>
+     <h1>Header</h1>
+   </header>
+ 
+   <div class="center-div">
+     <div class="container">
+      
+    <form class="signup-form"  action="/login" method="POST">
+        <h1>Login</h1>
+        <input type="text"  name="name" placeholder="Full Name" required>
+        <input type="email"  name="email" placeholder="Email Address" required>
+        <input type="password"  name="password" placeholder="Password" required>
+       
+      <button type="submit">Login</button>
+   
+    </div>
+       </form>
+     </div>
+   </div>
+ 
+   <footer>
+     <h3>Footer</h3>
+   </footer>
+ </body>
+ </html>
+  -->
+
+
+
+  <!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.112.5">
+  <title>Album example · Bootstrap v5.3</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+
+  
+
+  
+
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#712cf9">
+
+
+   <style>
+     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+ 
+     body {
+       margin: 0;
+       padding: 0;
+       background-color: #f9f9f9;
+       font-family: Arial, sans-serif;
+     }
+ 
+     
+ 
+ 
+     .center-div {
+       position: relative;
+       height: 600px;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center center;
+     }
+ 
+     .option-container {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+     }
+ 
+     .option-box {
+       margin-bottom: 20px;
+       width: 400px;
+       height: 100px;
+       background-color: #ffffff;
+       border: 1px solid #cccccc;
+       border-radius: 8px;
+       cursor: pointer;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       transition: background-color 0.3s ease;
+     }
+        .sticker {
+        background-color: #333333;
+        color: #ffffff;
+        font-size: 18px;
+        padding: 10px 20px 10px 10px;
+        border-radius: 4px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+ 
+     .option-box h3 {
+       font-size: 18px;
+       color: #333333;
+       margin: 0;
+       
+     }
+     .option-heading {
+       font-size: 24px;
+       color: rgb(63, 3, 3);
+       margin-bottom: 20px;
+     }
+
+  
+     .option-box:hover {
+       background-color: rgb(186, 128, 128);
+     }
+
+
+     .nav-scroller {
+         position: relative;
+         z-index: 2;
+         height: 2.75rem;
+         overflow-y: hidden;
+       }
+ 
+       .nav-scroller .nav {
+         display: flex;
+         flex-wrap: nowrap;
+         padding-bottom: 1rem;
+         margin-top: -1px;
+         overflow-x: auto;
+         text-align: center;
+         white-space: nowrap;
+         -webkit-overflow-scrolling: touch;
+       }
+ 
+       .btn-bd-primary {
+         --bd-violet-bg: #712cf9;
+         --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+ 
+         --bs-btn-font-weight: 600;
+         --bs-btn-color: var(--bs-white);
+         --bs-btn-bg: var(--bd-violet-bg);
+         --bs-btn-border-color: var(--bd-violet-bg);
+         --bs-btn-hover-color: var(--bs-white);
+         --bs-btn-hover-bg: #6528e0;
+         --bs-btn-hover-border-color: #6528e0;
+         --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+         --bs-btn-active-color: var(--bs-btn-hover-color);
+         --bs-btn-active-bg: #5a23c8;
+         --bs-btn-active-border-color: #5a23c8;
+       }
+       .bd-mode-toggle {
+         z-index: 1500;
+       }
+   </style>
+   <script>
+     document.addEventListener("DOMContentLoaded", function() {
+       var images = [
+         "images/front1.jpg",
+         "images/front2.jpg",
+         "images/front3.jpg",
+         "images/view.jpg"
+       ];
+       var currentIndex = 0;
+       var centerDiv = document.querySelector(".center-div");
+ 
+       function changeBackground() {
+         centerDiv.style.backgroundImage = "url('" + images[currentIndex] + "')";
+         currentIndex = (currentIndex + 1) % images.length;
+       }
+ 
+       setInterval(changeBackground, 3000);
+     });
+   </script>
+   <script>
+     function book() {
+       window.location.href = "/booking";
+     }
+ 
+     function cancelbook() {
+       window.location.href = "/cancel";
+     }
+ 
+     function Roomlist() {
+       window.location.href = "/rooms";
+     }
+   </script>
+ </head>
+ <body>
+  <header data-bs-theme="dark">
+    <div class="collapse text-bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4>About</h4>
+            <p class="text-body-secondary">Experience luxury redefined at our hotel. Immerse yourself in elegance and personalized service. With impeccable amenities and serene ambiance, we offer an unforgettable stay. Discover a sanctuary of relaxation and sophistication.</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4>Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Follow on Twitter</a></li>
+              <li><a href="#" class="text-white">Like on Facebook</a></li>
+              <li><a href="mailto:ritulsinha22@gmail.com" class="text-white">Email me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          <strong>Paradise</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+ 
+   <div class="center-div">
+  
+     <div class="option-container">
+        <div class="sticker">How may we help you?</div>
+        <br><br>
+       <div class="option-box" onclick="book()">
+         <h3>Book Room</h3>
+       </div>
+       <div class="option-box" onclick="cancelbook()">
+         <h3>Cancel Booking</h3>
+       </div>
+       <div class="option-box" onclick="Roomlist()">
+         <h3>Room List</h3>
+       </div>
+     </div>
+   </div>
+ 
+   <footer class="text-body-secondary py-5">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Back to top</a>
+      </p>
+      <p class="mb-1">© 2023 Paradise. All rights reserved. | Privacy Policy | Terms and Conditions</p>
+   
+    </div>
+  </footer>
+  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+ </body>
+ </html>
+
+
+
+ 

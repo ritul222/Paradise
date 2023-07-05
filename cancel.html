@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Cancel Reservation</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cancel Reservation</h2>
+        <form action="/cancel-reservation" method="POST">
+            <label for="reservationId">Reservation ID:</label>
+            <input type="text" id="reservationId" name="reservationId" required>
+            <select id="cancellationReason" name="cancellationReason" required>
+                <option value="">Select a reason</option>
+                <option value="Change of plans">Change of plans</option>
+                <option value="Booking mistake">Booking mistake</option>
+                <option value="Unforeseen circumstances">Unforeseen circumstances</option>
+                <option value="Other">Other</option>
+            </select>
+         
+            <br><br>
+            <input type="submit" value="Cancel Reservation">
+        </form>
+        <div class="background-container"></div>
+    </div>
+</body>
+</html>

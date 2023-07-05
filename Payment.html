@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #dce2f5;
+        }
+
+        .card {
+            width: 400px;
+            padding: 20px;
+            background-color: #dce2f5;
+            /* border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center; */
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .qr-code {
+            margin-top: 20px;
+        }
+        .q{
+            width:150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Payment Gateway</h2>
+            <p>Room Price: $100</p>
+            <div class="qr-code">
+                <img class= "q" src="images/qr.jpeg" alt="QR Code">
+            </div>
+            <button type="Submit" onclick="page()">Click me!</button>
+        </div>
+    </div>
+    <div class="background-container"></div>
+    <script>
+        function page(){
+            window.location.href="/Success"
+        }
+    </script>
+</body>
+</html>
